@@ -4,6 +4,8 @@ This app connects PIPEFORCE with Elastic Cloud or an Elasticsearch server in 3 s
 
 There is no need to install any of the tools from the Elastic stack like Logstash, Filebeat, Elastic Agent or similar.
 
+For more details about PIPEFORCE, refer to the [Developer Documentation](http://docs.pipeforce.io).
+
 ## Preconditions
 
 You have your own PIPEFORCE instance installed and running, or you have a PIPEFORCE Cloud account
