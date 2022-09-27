@@ -1,6 +1,6 @@
 # Elastic Integration for PIPEFORCE
 
-This app connects PIPEFORCE with Elastic Cloud or a Elasticsearch server in 3 simple steps.
+This app connects PIPEFORCE with Elastic Cloud or an Elasticsearch server in 3 simple steps.
 
 There is no need to install any of the tools from the Elastic stack like Logstash, Filebeat, Elastic Agent or similar.
 
@@ -13,7 +13,7 @@ You have your own Elasticsearch server up and running, or you have an Elastic Cl
 
 ## Setup
 
-1. Open your PIPEFORCE Portal and go to **Marketplace**. Search for this app there and click **Install**.
+1. Open your PIPEFORCE Portal and go to **Marketplace**. Search for this app `app-elastic-integration` there and click **Install**.
 2. Create a new **Secret** of format `bearer` and with name `elastic-token` and copy and paste the bearer token of your
    elastic documents API endpoint into the secret field (see your Elastic documentation for details about this token).
    Click **ADD**.
