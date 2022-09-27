@@ -1,0 +1,16 @@
+# Listens to log.* messages in the elastic_index queue and
+# shovels them in batches to the Elastic Cloud or Elasticsearch Server.
+
+pipeline:
+
+  - message.receive:
+      key: "log.*"
+      queue: "elastic_index" # Creates automatically this queue if not exists
+      maxBatchSize: 10000
+
+  - log:
+      message: "#{body}"
+
+  - http.post:
+      credentials: "elastic-rest-api" # Create a secret with this name
+      url: "https://.../api/as/v1/engines/.../documents" # Replace by the URL of your Elastic engine (index)
