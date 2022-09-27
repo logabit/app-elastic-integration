@@ -12,5 +12,5 @@ pipeline:
       message: "#{body}"
 
   - http.post:
-      credentials: "elastic-rest-api" # Create a secret with this name
-      url: "https://.../api/as/v1/engines/.../documents" # Replace by the URL of your Elastic engine (index)
+      credentials: "elastic-token" # Create a bearer secret with exactly this name
+      url: "https://.../api/as/v1/engines/.../documents" # Replace this by the URL of your Elastic engine (index)
