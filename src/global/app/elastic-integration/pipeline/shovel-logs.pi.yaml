@@ -8,9 +8,6 @@ pipeline:
       queue: "elastic_index" # Creates automatically this queue if not exists
       maxBatchSize: 10000
 
-  - log:
-      message: "#{body}"
-
   - http.post:
       credentials: "elastic-token" # Create a bearer secret with exactly this name
       url: "https://.../api/as/v1/engines/.../documents" # Replace this by the URL of your Elastic engine (index)
