@@ -1,4 +1,4 @@
-# Elastic Integration for PIPEFORCE
+# Elastic Integration for PIPEFORCE 
 
 This app connects PIPEFORCE with Elastic Cloud or an Elasticsearch server in 3 simple steps. After installing this app,
 you can browse all logs of all microservices and pipelines in Elastic and use Kibana to filter and build dashboards

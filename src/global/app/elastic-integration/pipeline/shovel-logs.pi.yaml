@@ -1,13 +1,15 @@
 # Listens to log.* messages in the elastic_index queue and
 # shovels them in batches to the Elastic Cloud or Elasticsearch Server.
+vars:
+  # Set here the URL of your Elastic engine (index) API endpoint
+  elasticApiUrl: "https://.../documents"
 
 pipeline:
 
   - message.receive:
       key: "log.*"
       queue: "elastic_index" # Creates automatically this queue if not exists
-      maxBatchSize: 10000
 
   - http.post:
       credentials: "elastic-token" # Create a bearer secret with exactly this name
-      url: "https://.../api/as/v1/engines/.../documents" # Replace this by the URL of your Elastic engine (index)
+      url: "#{var.elasticApiUrl}"
