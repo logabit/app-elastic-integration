@@ -8,8 +8,8 @@ pipeline:
 
   - message.receive:
       key: "log.*"
-      queue: "pipeforce_logs" # Creates automatically this queue if not exists
+      queue: "pipeforce_logs" # Creates automatically this queue if not already exists
 
   - http.post:
-      credentials: "elastic-token" # Create a bearer secret with exactly this name
+      secret: "ELASTIC_TOKEN" # Create a bearer secret with exactly this name
       url: "#{var.elasticApiUrl}"
